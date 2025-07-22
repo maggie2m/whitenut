@@ -32,9 +32,18 @@ export default function Founder() {
   return (
     <section className="py-20 px-4 bg-white text-gray-800">
       <div className="text-center mb-12">
-        <h2 className="text-7xl font-semibold">
-          Meet Our <span className="text-accent bg-gradient-to-tr from-sky-300 to-blue-700 bg-clip-text text-transparent">Founders</span>
-        </h2>
+<h2 className="text-7xl font-semibold">
+  Meet Our{' '}
+  <span
+    className="bg-clip-text text-transparent"
+    style={{
+      backgroundImage: 'linear-gradient(135deg, hsl(220 50% 8%), hsl(45 100% 51%))',
+    }}
+  >
+    Founders
+  </span>
+</h2>
+
         <p className="mt-4 max-w-2xl mx-auto">
           Visionary leadership driving innovation and excellence in every project we undertake.
         </p>
@@ -44,7 +53,13 @@ export default function Founder() {
         {founders.map((founder, index) => (
           <div key={index} className="space-y-6">
             <div className="relative">
-              <div className="absolute top-4 left-4 w-full h-full bg-gradient-to-r from-sky-300 to-blue-700  transform rotate-1 rounded-xl z-0"></div>
+         <div
+  className="absolute top-4 left-4 w-full h-full transform rotate-1 rounded-xl z-0"
+  style={{
+    backgroundImage: 'linear-gradient(135deg, hsl(220 50% 8%), hsl(45 100% 51%))',
+  }}
+></div>
+
               <div className="relative z-10 bg-white border rounded-xl p-6 text-center shadow">
                 <img
                   src={founder.image}
@@ -91,9 +106,15 @@ export default function Founder() {
           </ul>
         </div>
         <div className="mt-6 text-center">
-          <button className="bg-gradient-to-r from-sky-300 to-blue-700  text-white px-6 py-3 rounded-md font-semibold">
-            Schedule a Personal Consultation
-          </button>
+         <button
+  className="text-white px-6 py-3 rounded-md font-semibold"
+  style={{
+    backgroundImage: 'linear-gradient(135deg, hsl(220 50% 8%), hsl(45 100% 51%))',
+  }}
+>
+  Schedule a Personal Consultation
+</button>
+
         </div>
       </div>
     </section>

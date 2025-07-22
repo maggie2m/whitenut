@@ -19,7 +19,7 @@ function App() {
        <CoreValues />
      <Services />
        <CTA />
-       <Founder/>
+       {/* <Founder/> */}
       <Footer />
     </>
   )

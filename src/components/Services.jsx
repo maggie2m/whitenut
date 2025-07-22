@@ -51,9 +51,18 @@ export default function Services() {
   return (
     <section className="py-16 px-4 bg-white text-gray-800">
       <div className="text-center mb-12">
-        <h2 className="text-7xl font-semibold">
-          Our <span className="bg-gradient-to-tr from-sky-300 to-blue-700 bg-clip-text text-transparent">Services</span>
-        </h2>
+<h2 className="text-7xl font-semibold">
+  Our{' '}
+  <span
+    className="bg-clip-text text-transparent"
+    style={{
+      backgroundImage: 'linear-gradient(135deg, hsl(220 50% 8%), hsl(45 100% 51%))',
+    }}
+  >
+    Services
+  </span>
+</h2>
+
 
         <p className="mt-4 max-w-3xl mx-auto">
           We offer a comprehensive suite of premium digital services designed to transform your vision into exceptional digital reality.
