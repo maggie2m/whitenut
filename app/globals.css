@@ -1,0 +1,66 @@
+@import "tailwindcss";
+
+@theme {
+  --color-brand-orange: #FF6B35;
+  --color-brand-gold: #FFB830;
+  --color-brand-teal: #00D4AA;
+  --color-brand-blue: #0A84FF;
+  --color-brand-purple: #7C3AED;
+  --color-brand-pink: #FF2D78;
+  --color-dark: #06080F;
+  --color-dark2: #0D1117;
+  --color-dark3: #161B27;
+  --color-site-text: #F0F4FF;
+  --color-muted: #8A95B0;
+  --font-syne: 'Syne', sans-serif;
+  --font-dm: 'DM Sans', sans-serif;
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+  background-color: #06080F;
+  color: #F0F4FF;
+  font-family: 'DM Sans', sans-serif;
+  overflow-x: hidden;
+}
+
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: #0D1117; }
+::-webkit-scrollbar-thumb { background: #FF6B35; border-radius: 3px; }
+
+@keyframes pulse-dot {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.4; transform: scale(1.5); }
+}
+@keyframes bounce-scroll {
+  0%, 100% { transform: translateX(-50%) translateY(0); }
+  50% { transform: translateX(-50%) translateY(6px); }
+}
+@keyframes fade-up {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+
+.animate-pulse-dot   { animation: pulse-dot 2s infinite; }
+.animate-bounce-scroll { animation: bounce-scroll 2s infinite; }
+.animate-marquee     { animation: marquee 20s linear infinite; }
+
+.anim-badge  { animation: fade-up 0.8s ease both; }
+.anim-title  { animation: fade-up 0.8s 0.1s ease both; }
+.anim-sub    { animation: fade-up 0.8s 0.2s ease both; }
+.anim-btns   { animation: fade-up 0.8s 0.3s ease both; }
+
+.reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
